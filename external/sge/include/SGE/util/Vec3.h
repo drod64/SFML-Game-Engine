@@ -31,13 +31,16 @@ public:
 
     void normalize();
     
+    Vec3& operator = (const Vec3 &vec);
     Vec3& operator *= (real scalar);
     Vec3& operator += (const Vec3 &vec);
     Vec3& operator -= (const Vec3 &vec);
+    Vec3& operator %= (const Vec3 & vec);
     
     Vec3 operator * (const real scalar) const;
     Vec3 operator + (const Vec3 &vec) const;
     Vec3 operator - (const Vec3 &vec) const;
+    Vec3 operator % (const Vec3 &vec) const;
 
     
     Vec3& componentProductUpdate(const Vec3 &vec);
@@ -45,6 +48,7 @@ public:
 
     real dotProduct(const Vec3 &vec) const;
     Vec3 componentProduct(const Vec3 &vec) const;
+    Vec3 vectorProduct(const Vec3 &vec) const;
 
 private:
     float _pad;
