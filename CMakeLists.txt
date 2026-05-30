@@ -33,6 +33,11 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/external/s
 target_link_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/external/sm)
 target_link_libraries(${PROJECT_NAME} SM)
 
+add_subdirectory(${CMAKE_SOURCE_DIR}/external/spe)
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/external/spe/include)
+target_link_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/external/spe)
+target_link_libraries(${PROJECT_NAME} SPE)
+
 add_subdirectory(${CMAKE_SOURCE_DIR}/external/sge)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/external/sge/include)
 target_link_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/external/sge)
