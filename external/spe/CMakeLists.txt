@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.27.3)
 project(SPE)
 
 set(SOURCE_FILES
-    src/Particle.cpp
+    src/Particle3.cpp
     )
 
 add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
