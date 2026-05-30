@@ -1,9 +1,6 @@
-#ifndef SGE_VEC2_CPP
-#define SGE_VEC2_CPP
-#include <SGE/util/Vec2.h>
-#include <iostream>
+#include <SM/Vec2.h>
 
-namespace sge
+namespace sm
 {
     Vec2::Vec2()
     : x(0), y(0)
@@ -237,5 +234,3 @@ namespace sge
         return *this;
     }
 };
-
-#endif // SGE_VEC2_CPP

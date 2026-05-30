@@ -1,7 +1,7 @@
 #ifndef SGE_ANIMATION_H
 #define SGE_ANIMATION_H
 #include <vector>
-#include <SGE/util/Vec2.h>
+#include <SM/Vec2.h>
 #include <SFML/Graphics.hpp>
 
 namespace sge {

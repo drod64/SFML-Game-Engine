@@ -39,7 +39,7 @@ public:
 
     bool hasEnded() const;
     const std::map<int, std::string>& getActionMap() const;
-    sf::VertexArray createLine(const sge::Vec2 &p1, const sge::Vec2 &p2);
+    sf::VertexArray createLine(const sm::Vec2 &p1, const sm::Vec2 &p2);
 
 };
 

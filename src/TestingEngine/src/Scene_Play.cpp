@@ -184,19 +184,19 @@ void Scene_Play::spawnPlayer()
     this->m_player = this->m_entities.addEntity("Player");
 
     this->m_player->addComponent<sge::CAnimation>(this->m_game->getAssets().getAnimation("sansWalk"), true);
-    this->m_player->addComponent<sge::CBoundingBox>(sge::Vec2(50,50));
+    this->m_player->addComponent<sge::CBoundingBox>(sm::Vec2(50,50));
     this->m_player->getComponent<sge::CAnimation>().animation.scaleToSize({50, 50});
 
     this->m_player->addComponent<sge::CInput>();
     this->m_player->addComponent<sge::CScore>(0);
-    this->m_player->addComponent<sge::CTransform>(sge::Vec2(0, 300), sge::Vec2(0, 0), 0);
+    this->m_player->addComponent<sge::CTransform>(sm::Vec2(0, 300), sm::Vec2(0, 0), 0);
     this->m_player->getComponent<sge::CTransform>().scale = {1, 1};
 }
 
 void Scene_Play::sMovement()
 {
     // Update player velocity based on keyboard input
-    sge::Vec2 playerVelocity = {0, 0};
+    sm::Vec2 playerVelocity = {0, 0};
     sge::CInput &input = this->m_player->getComponent<sge::CInput>();
     
     if (input.left)         { playerVelocity.x = -3; }

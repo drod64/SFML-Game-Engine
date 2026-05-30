@@ -1,23 +1,23 @@
 #ifndef SGE_CBOUNDING_BOX
 #define SGE_CBOUNDING_BOX
 #include <sge/components/Component.h>
-#include <sge/util/Vec2.h>
+#include <SM/Vec2.h>
 
 namespace sge {
 class CBoundingBox : public Component {
 private:
-    sge::Vec2 m_size;
-    sge::Vec2 m_halfSize;
+    sm::Vec2 m_size;
+    sm::Vec2 m_halfSize;
 
 public:
     CBoundingBox();
     CBoundingBox(const CBoundingBox &otherBox);
-    CBoundingBox(const Vec2 &size);
+    CBoundingBox(const sm::Vec2 &size);
 
-    sge::Vec2 size() const;
-    sge::Vec2 halfSize() const;
+    sm::Vec2 size() const;
+    sm::Vec2 halfSize() const;
 
-    void setSize(const sge::Vec2 &size);
+    void setSize(const sm::Vec2 &size);
 
 };
 }

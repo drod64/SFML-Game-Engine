@@ -1,9 +1,9 @@
-#ifndef SGE_COLLISIONDETECTOR_H
-#define SGE_COLLISIONDETECTOR_H
+#ifndef SPE_COLLISIONDETECTOR_H
+#define SPE_COLLISIONDETECTOR_H
 #include <cmath>
 #include <vector>
 #include <SGE/entities/Entity.h>
-#include <SGE/util/Vec2.h>
+#include <SPE/Vec2.h>
 
 class CollisionDetector {
 public:

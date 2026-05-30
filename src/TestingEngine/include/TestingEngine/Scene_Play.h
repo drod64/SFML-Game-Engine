@@ -19,7 +19,7 @@ private:
     bool m_drawTextures;
     bool m_drawCollision;
     bool m_drawGrid;
-    sge::Vec2 m_gridSize;
+    sm::Vec2 m_gridSize;
 
     sf::Text m_gridText;
 

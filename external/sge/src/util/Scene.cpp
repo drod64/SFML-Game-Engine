@@ -58,7 +58,7 @@ const std::map<int, std::string>& sge::Scene::getActionMap() const
     return this->m_actionMap;
 }
 
-sf::VertexArray sge::Scene::createLine(const sge::Vec2 &p1, const sge::Vec2 &p2)
+sf::VertexArray sge::Scene::createLine(const sm::Vec2 &p1, const sm::Vec2 &p2)
 {
     sf::VertexArray line (sf::Lines, 2);
     line[0].position = {p1.x, p1.y};

@@ -9,7 +9,6 @@ set(SOURCE_FILES
     src/util/Assets.cpp
     src/util/GameEngine.cpp
     src/util/Scene.cpp
-    src/util/Vec2.cpp
 
     # Components
     src/components/Component.cpp
@@ -27,6 +26,10 @@ set(SOURCE_FILES
     src/entities/EntityManager.cpp)
 
 add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
+
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/external/sm/include)
+target_link_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/external/sm)
+target_link_libraries(${PROJECT_NAME} SM)
 
 # NOTE: this library expects the SFML variables to have already been found (in the root level CMakeLists.txt)
 if (SFML_FOUND)

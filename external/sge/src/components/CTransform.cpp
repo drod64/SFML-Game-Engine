@@ -14,7 +14,7 @@ namespace sge
     angle(otherTransform.angle)
     {}
 
-    CTransform::CTransform(const Vec2 &position, const Vec2 &velocity, float angle) :
+    CTransform::CTransform(const sm::Vec2 &position, const sm::Vec2 &velocity, float angle) :
     position(position),
     velocity(velocity),
     angle(angle)

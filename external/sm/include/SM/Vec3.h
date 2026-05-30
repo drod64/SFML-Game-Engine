@@ -1,8 +1,8 @@
-#ifndef SGE_VEC3_H
-#define SGE_VEC3_H
-#include <SGE/util/Precision.h>
+#ifndef SM_VEC3_H
+#define SM_VEC3_H
+#include <SM/Precision.h>
 
-namespace sge {
+namespace sm {
 
 class Vec3 {
 public:
@@ -102,6 +102,6 @@ private:
     float _pad;
 };
 
-} // namespace sge
+} // namespace sm
 
-#endif // SGE_VEC3_H
+#endif // SM_VEC3_H

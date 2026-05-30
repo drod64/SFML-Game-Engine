@@ -1,9 +1,10 @@
-#ifndef SGE_VEC2_H
-#define SGE_VEC2_H
+#ifndef SM_VEC2_H
+#define SM_VEC2_H
 #include <initializer_list>
+#include <iostream>
 #include <cmath>
 
-namespace sge {
+namespace sm {
 
 // TODO test all the functions of this class.
 class Vec2 {
@@ -57,4 +58,4 @@ public:
 
 };
 
-#endif // SGE_VEC2_H
+#endif // SM_VEC2_H

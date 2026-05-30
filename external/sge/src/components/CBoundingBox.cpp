@@ -15,22 +15,22 @@ sge::CBoundingBox::CBoundingBox(const sge::CBoundingBox &otherBox)
     }
 }
 
-sge::CBoundingBox::CBoundingBox(const sge::Vec2 &size)
+sge::CBoundingBox::CBoundingBox(const sm::Vec2 &size)
 {
     setSize(size);
 }
 
-sge::Vec2 sge::CBoundingBox::size() const
+sm::Vec2 sge::CBoundingBox::size() const
 {
     return this->m_size;
 }
 
-sge::Vec2 sge::CBoundingBox::halfSize() const
+sm::Vec2 sge::CBoundingBox::halfSize() const
 {
     return this->m_halfSize;
 }
 
-void sge::CBoundingBox::setSize(const sge::Vec2 &size)
+void sge::CBoundingBox::setSize(const sm::Vec2 &size)
 {
     this->m_size = size;
     this->m_halfSize = {size.x / 2.f, size.y / 2.f};

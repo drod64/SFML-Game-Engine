@@ -27,8 +27,13 @@ PUBLIC include)
 target_link_libraries(${PROJECT_NAME} ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
 endif ()
 
-# After SFML is found and linked correctly, link to the custom library.
-add_subdirectory(${CMAKE_SOURCE_DIR}/external/sge) # Goes to the libraries CMakeLists.txt
+# After SFML is found and linked correctly, link to the custom libraries.
+add_subdirectory(${CMAKE_SOURCE_DIR}/external/sm)
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/external/sm/include)
+target_link_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/external/sm)
+target_link_libraries(${PROJECT_NAME} SM)
+
+add_subdirectory(${CMAKE_SOURCE_DIR}/external/sge)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/external/sge/include)
 target_link_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/external/sge)
 target_link_libraries(${PROJECT_NAME} SGE)
